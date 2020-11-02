@@ -1,0 +1,27 @@
+table thead {
+    background-color: #3872ef;
+    color: #ffffff;
+}
+
+.buscadorS {
+    background-color: #f0f3f5;
+    color: #5583ff;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #5583ff;
+}
