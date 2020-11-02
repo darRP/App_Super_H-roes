@@ -14,6 +14,7 @@ Aplicación web que te permite obtener información sobre super héroes (para es
 ## Instalación
 ### 1 Paso
 **1 forma**. Dar clic en Code y luego en Donwload Zip
+
 **2 forma.** Crear una carpeta, ingresar a git bash y ejecutar
 
     git clone https://github.com/darRP/API_Ejercicio_Uno_PI.git
