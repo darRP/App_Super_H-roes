@@ -1,6 +1,16 @@
 # App_Super_Heroes
 Aplicación web que te permite obtener información sobre super héroes (para esto se uso la API https://superheroapi.com/index.html) y verla en un DataTable. 
 
+## Imagenes de la APP
+### Imagen APP Browser
+![](https://raw.githubusercontent.com/darRP/App_Super_Heroes/main/public/version_browser.PNG)
+
+
+### Imagen APP Movil
+![](https://raw.githubusercontent.com/darRP/App_Super_Heroes/main/public/version_movil.PNG)
+
+- Este Datatable salio de https://www.youtube.com/watch?v=HIDn_HpEuEQ&list=PLRsZypNYMyFoqAIy6yOUez9TYmIawPwj5&index=1 por si alguien desea utilizarlo es de libre uso.
+
 ## Instalación
 ### 1 Paso
 **1 forma**. Dar clic en Code y luego en Donwload Zip
