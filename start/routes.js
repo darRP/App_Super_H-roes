@@ -15,5 +15,5 @@
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
-Route.get('/getSuperHeroes', 'TraerHeroController.getSuperHeroes')
+Route.get('/getSuperHeroes', 'GetHeroeController.getSuperHeroes')
 Route.on('/').render('welcome')

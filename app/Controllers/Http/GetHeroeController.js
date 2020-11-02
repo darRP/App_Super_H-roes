@@ -1,6 +1,6 @@
 'use strict'
 
-class TraerHeroController {
+class GetHeroeController {
     async getSuperHeroes({ request, response }) {
         try {
             let heroe = request.get().heroe;
@@ -38,15 +38,15 @@ class TraerHeroController {
                         combat: element.powerstats.combat,
                     });
                 });
-                return response.status(200).json(newListHeroes);
+                return response.removeHeader('Set-Cookie', 'Server').status(200).json(newListHeroes);
             } else {
-                return response.status(200).json({ message: 'no se encontro héroe' });
+                return response.removeHeader('Set-Cookie', 'Server').status(200).json({ message: 'no se encontro héroe' });
             }
         } catch (error) {
             console.log(error);
-            return response.status(200).json({ message: error });
+            return response.removeHeader('Set-Cookie', 'Server').status(200).json({ message: error });
         }
     }
 }
 
-module.exports = TraerHeroController
+module.exports = GetHeroeController

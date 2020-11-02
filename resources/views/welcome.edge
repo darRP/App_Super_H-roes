@@ -26,7 +26,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <table id="example" class="table table-bordered  display nowrap" cellspacing="0" width="100%">
+                <table id="tablaHeroes" class="table table-bordered  display nowrap" cellspacing="0" width="100%">
                     <thead>
                         <tr>
                             <th>Héroe</th>
@@ -58,66 +58,7 @@
 
     <!-- extension responsive -->
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#buscador').keypress(function(e) {
-                var keycode = (e.keyCode ? e.keyCode : e.which);
-                if (keycode == '13') {
-                    var value = $(this).val().toLowerCase().trim();
-                    console.log(value)
-                    if (value != '') {
-                        cargardata(value);
-                    } else {
-                        alert('Debe escribir el nombre del héroe y oprimir enter, evite vacíos');
-                    }
-
-
-                }
-            });
-
-            function cargardata(val) {
-                $.ajax({
-                    url: "/getSuperHeroes?heroe=" + val,
-                    type: "GET",
-                    success: function(result) {
-                        console.log(result);
-                        if (result.message == 'no se encontro héroe') {
-                            alert(result.message);
-                        } else {
-                            $('#example').DataTable().destroy();
-                            $('#example').DataTable({
-                                responsive: true,
-                                data: result,
-                                "columns": [{
-                                    "data": "Heroe"
-                                }, {
-                                    "data": "Nombre"
-                                }, {
-                                    "data": "Bando"
-                                }, {
-                                    "data": "intelligence"
-                                }, {
-                                    "data": "strength"
-                                }, {
-                                    "data": "speed"
-                                }, {
-                                    "data": "durability"
-                                }, {
-                                    "data": "power"
-                                }, {
-                                    "data": "combat"
-                                }]
-                            });
-                            return true;
-                        }
-
-                    }
-                });
-            }
-            cargardata('batman');
-
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
